@@ -14,32 +14,32 @@ function rot13(encodedStr){
    let decodedArr = []; // Your Result goes here
   // Only change code below this line
 
-	// let shift = 13;
+	let shift = 13;
 
-	// for (var i = 0; i < encodedStr.length; i++) {
-	// 	var c = encodedStr.charCodeAt(i);
+	for (var i = 0; i < encodedStr.length; i++) {
+		var c = encodedStr.charCodeAt(i);
 		
-	// 	// apply the shift to alphabetic characters
-	// 	if (c >= 65 && c <= 90) {
-	// 		decodedArr.push(String.fromCharCode(((c - 65 + shift) % 26) + 65));  // uppercase
-	// 	} else {
-	// 		decodedArr.push(encodedStr.charAt(i));  // non-alphabetic character
-	// 	}
-	// }
+		// apply the shift to alphabetic characters
+		if (c >= 65 && c <= 90) {
+			decodedArr.push(String.fromCharCode(((c - 65 + shift) % 26) + 65));  // uppercase
+		} else {
+			decodedArr.push(encodedStr.charAt(i));  // non-alphabetic character
+		}
+	}
 	
-	// return decodedArr;
+	return decodedArr.join("");
 
-  for (var i = 0; i < encodedStr.length; i++) {
-    var ascii = encodedStr.charCodeAt(i);
-    if (ascii >= 65 && ascii <= 90) {
-      ascii -= 13;
-      if (ascii < 65) {
-        ascii += 26;
-      }
-    }
-    decodedArr.push(String.fromCharCode(ascii));
-  }
-  return decodedArr.join("");
+  // for (var i = 0; i < encodedStr.length; i++) {
+  //   var ascii = encodedStr.charCodeAt(i);
+  //   if (ascii >= 65 && ascii <= 90) {
+  //     ascii -= 13;
+  //     if (ascii < 65) {
+  //       ascii += 26;
+  //     }
+  //   }
+  //   decodedArr.push(String.fromCharCode(ascii));
+  // }
+  // return decodedArr.join("");
 }
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
