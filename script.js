@@ -14,7 +14,20 @@ function rot13(encodedStr){
    let decodedArr = []; // Your Result goes here
   // Only change code below this line
 
-  return ;//return decodedArr
+	shift = 13;
+
+  for (var i = 0; i < encodedStr.length; i++) {
+    var c = encodedStr.charCodeAt(i);
+
+    // apply the shift to alphabetic characters
+    if (c >= 65 && c <= 90) {
+      decodeArr.push(String.fromCharCode(((c - 65 + shift) % 26) + 65));  // uppercase
+    } else {
+      decodeArr.push(str.charAt(i));  // non-alphabetic character
+    }
+  }
+
+  return decodedArr;
 }
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
