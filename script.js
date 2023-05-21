@@ -26,18 +26,6 @@ function rot13(encodedStr){
 	}
 	
 	return decodedArr.join("");
-
-  // for (var i = 0; i < encodedStr.length; i++) {
-  //   var ascii = encodedStr.charCodeAt(i);
-  //   if (ascii >= 65 && ascii <= 90) {
-  //     ascii -= 13;
-  //     if (ascii < 65) {
-  //       ascii += 26;
-  //     }
-  //   }
-  //   decodedArr.push(String.fromCharCode(ascii));
-  // }
-  // return decodedArr.join("");
 }
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
